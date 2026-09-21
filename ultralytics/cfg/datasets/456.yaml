@@ -1,0 +1,20 @@
+# dataset.yaml
+path: /home/haochuanyan/QQH/SODA
+#-SLICE
+train: output-train/images
+val: test/images
+#test: ./test/images  # 可选，如果你没有 test 数据集可以删除此行
+
+nc: 10  # 类别数量
+
+names:
+  0: airplane
+  1: helicopter
+  2: small-vehicle
+  3: large-vehicle
+  4: ship
+  5: container
+  6: storage-tank
+  7: swimming-pool
+  8: windmill
+  9: ignore

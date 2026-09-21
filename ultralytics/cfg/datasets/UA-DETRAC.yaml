@@ -1,0 +1,23 @@
+# Ultralytics YOLO ��, AGPL-3.0 license
+# UA-DETRAC dataset http://detrac-db.rit.albany.edu/ for vehicle detection
+# Example usage: yolo train model=yolov8n.pt data=UA-DETRAC.yaml
+# parent
+# ├── ultralytics
+# └── datasets
+#     └── UA-DETRAC  ← dataset directory
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list:[path/to/imgs1, path/to/imgs2, ..]
+path: /home/dell/QQH/small object detection/UA-DETR-SLICE # dataset root dir
+train: train/images # train images (relative to 'path')
+val: val/images # val images (relative to 'path')
+#test: # test images (optional) - omitted as requested
+
+# Classes for UA-DETRAC
+names:
+  0: car
+  1: bus
+  2: van
+  3: others
+
+# Download script/URL (optional)
+# download: # UA-DETRAC typically requires registration on their official website to download, so no direct URL is provided here.

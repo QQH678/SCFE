@@ -1,0 +1,9 @@
+# SCFE: Saliency-Correlation Feature Enhancement
+
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+This work proposes a feature-enhanced detection framework for small-object detection. Built upon YOLO11, the proposed framework introduces a low-parameter Saliency-Correlation Feature Enhancement module, termed SCFE, to effectively strengthen the network's feature representation for small objects. Specifically, SCFE constructs a local saliency path and a global correlation path to simultaneously capture local discriminative information and long-range dependencies in feature maps, thereby extracting and compensating for weak target signals. In the local path, a parameter-free energy function is used to capture the outlier saliency of targets, while in the global path, outer-product computation is employed to model topological correlations among pixels and supplement diluted structural information. Furthermore, low-parameter BiLSTM is introduced to dynamically regulate the fusion ratio of the two types of features, enhancing the model's robustness under varying object-density conditions. In the feature aggregation stage, DySample dynamic upsampling and the SPPCSPC module are adopted to reduce detail loss during scale transformation, while an EMA module is further incorporated to optimize cross-scale contextual information interaction. Finally, for dense small-object scenarios, an additional high-resolution detection head, namely P2-Head, is added to the model architecture, establishing a full-scale perception system.
+
+## Code Availability
+
+This repository currently provides the core implementation of the proposed algorithm. The complete codebase, configuration files, and documentation will be released progressively after further organization and optimization. Continued updates are planned.
